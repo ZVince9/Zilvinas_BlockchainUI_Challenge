@@ -42,6 +42,7 @@ npm install
 - src/pages -> POM pages defined
 - src/fixtures -> basic before flows including synpress and wallet setup
 - src/wallet.setup.ts -> wallet setup flow
+- there is no lint or eslint set so possible future code readness to adjust and confirm within company standarts
 
 ### 3. How to run tests and basic of flows
 
