@@ -2,8 +2,13 @@
   "name": "zilvinas_blockchainui_challenge",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "e2e:wallet:generate": "HEADLESS=true npx synpress ./src/tests",
+    "e2e:wallet:connect": "HEADLESS=true npx playwright test -g 'connect wallet'",
+    "e2e:wallet:navigate": "npx playwright test -g 'navigate'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ZVince9/Zilvinas_BlockchainUI_Challenge.git"
@@ -16,7 +21,14 @@
   },
   "homepage": "https://github.com/ZVince9/Zilvinas_BlockchainUI_Challenge#readme",
   "devDependencies": {
-    "@playwright/test": "^1.57.0",
-    "@types/node": "^25.0.3"
-  }
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^25.0.3",
+    "dotenv": "^17.2.3",
+    "dotenv-cli": "^11.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@synthetixio/synpress": "^4.1.1"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
