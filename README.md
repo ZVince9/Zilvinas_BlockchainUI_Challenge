@@ -2,6 +2,16 @@
 
 A professional E2E automation suite for **Jumper Exchange** built with **Playwright** and **Synpress v4**. This project demonstrates advanced Web3 testing patterns, including wallet session caching, multi-tab handling, and a robust Page Object Model (POM).
 
+## 🛠 Wallet Configuration
+
+Note: This project currently uses hardcoded credentials in `src/tests/wallet.setup.ts` for ease of evaluation.
+
+1. Open `src/tests/wallet.setup.ts`.
+2. Replace the `SEED_PHRASE` constant with your test recovery phrase.
+3. Run `npm run e2e:wallet:generate` to update the local session cache.
+
+⚠️ **Warning**: Never use a seed phrase associated with real funds for this automation.
+
 ## 🛠 Tech Stack
 
 - **Framework**: [Playwright](https://playwright.dev/)
@@ -17,6 +27,7 @@ A professional E2E automation suite for **Jumper Exchange** built with **Playwri
 ## 🚀 Getting Started
 
 ### 1. Installation
+
 
 Clone the repository and install dependencies:
 
