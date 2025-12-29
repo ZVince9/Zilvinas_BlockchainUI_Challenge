@@ -7,7 +7,10 @@
   "scripts": {
     "e2e:wallet:generate": "HEADLESS=true npx synpress ./src/tests",
     "e2e:wallet:connect": "HEADLESS=true npx playwright test -g 'connect wallet'",
-    "e2e:wallet:navigate": "HEADLESS=true npx playwright test -g 'navigate'"
+    "e2e:wallet:navigate": "HEADLESS=true npx playwright test -g 'navigate'",
+    "ci:e2e:wallet:generate": "npx synpress ./src/tests",
+    "ci:e2e:wallet:connect": "npx playwright test -g 'connect wallet'",
+    "ci:e2e:wallet:navigate": "px playwright test -g 'navigate'"
   },
   "repository": {
     "type": "git",
