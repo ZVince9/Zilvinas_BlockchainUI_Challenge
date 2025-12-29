@@ -1,5 +1,4 @@
-// src/tests/pages/BasePage.ts
-import type { Page } from "@playwright/test"; // Use 'import type' here
+import type { Page } from "@playwright/test";
 
 export class BasePage {
   protected page: Page;

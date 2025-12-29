@@ -1,4 +1,3 @@
-// src/tests/fixtures.ts
 import { testWithSynpress } from "@synthetixio/synpress";
 import { MetaMask, metaMaskFixtures } from "@synthetixio/synpress/playwright";
 import walletSetup from "./wallet.setup";
