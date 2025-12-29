@@ -49,6 +49,10 @@ npm install
 2. If you set in package.json file HEADLESS=false it will open up and you will see UI interaction.
 3. All TC are within src/e2e.
 
+### 4. CI/CD
+
+- its created so every PR generate wallet cashe and runs navigate e2e test only
+
 ```bash
 npm run e2e:wallet:connect -> this will trigger wallet connection flow
 npm run e2e:wallet:navigate -> this will trigger navigate flow

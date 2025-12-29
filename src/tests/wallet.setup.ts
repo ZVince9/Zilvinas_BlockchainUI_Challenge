@@ -2,17 +2,20 @@ import { defineWalletSetup } from "@synthetixio/synpress";
 import { getExtensionId, MetaMask } from "@synthetixio/synpress/playwright";
 import dotenv from "dotenv";
 
-dotenv.config();
+if (!process.env.CI) {
+  dotenv.config();
+}
 
-// change SEED_PHRASE and PASSWORD according to your wallet information
-// const SEED_PHRASE =
-//   "breeze head potato tuna tail luggage initial bring visa dinner own chest";
-// const PASSWORD = "Testing1234?";
-const SEED_PHRASE =
-  process.env.SEED_PHRASE || "test test test test test test test test test";
-const PASSWORD = process.env.PASSWORD || "TEST";
+const SEED_PHRASE = process.env.SEED_PHRASE;
+const PASSWORD = process.env.PASSWORD;
 
-export default defineWalletSetup(PASSWORD, async (context, walletPage) => {
+export default defineWalletSetup(PASSWORD!, async (context, walletPage) => {
+  if (!SEED_PHRASE || !PASSWORD) {
+    throw new Error(
+      "Ensure your .env file exists locally or Secrets are set in GitHub."
+    );
+  }
+
   const extensionId = await getExtensionId(context, "MetaMask");
   const metamask = new MetaMask(context, walletPage, PASSWORD, extensionId);
 
