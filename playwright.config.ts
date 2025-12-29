@@ -6,14 +6,14 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  // reporter: [["html"], ["list"]],
+  reporter: [["html"], ["list"]],
   timeout: 120000,
 
   use: {
     baseURL: "https://jumper.exchange/",
-    // trace: "on",
-    // screenshot: "only-on-failure",
-    // video: "retain-on-failure",
+    trace: "on",
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
     actionTimeout: 15000,
     navigationTimeout: 30000,
   },

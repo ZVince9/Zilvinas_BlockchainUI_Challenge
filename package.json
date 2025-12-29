@@ -7,7 +7,7 @@
   "scripts": {
     "e2e:wallet:generate": "HEADLESS=true npx synpress ./src/tests",
     "e2e:wallet:connect": "HEADLESS=true npx playwright test -g 'connect wallet'",
-    "e2e:wallet:navigate": "npx playwright test -g 'navigate'"
+    "e2e:wallet:navigate": "HEADLESS=true npx playwright test -g 'navigate'"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,8 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@synthetixio/synpress": "^4.1.1"
+    "@synthetixio/synpress": "^4.1.1",
+    "dotenv": "^17.2.3"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

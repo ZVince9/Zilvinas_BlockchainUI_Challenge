@@ -4,7 +4,6 @@ import { expect, type Locator, type Page } from "@playwright/test";
 export class WidgetPage extends BasePage {
   private readonly connectButton: Locator;
   private readonly walletModal: Locator;
-  private readonly metamaskOption: Locator;
   private readonly menuBurger: Locator;
 
   constructor(page: Page) {
@@ -14,9 +13,6 @@ export class WidgetPage extends BasePage {
       exact: true,
     });
     this.walletModal = this.page.locator("#widget-wallet-modal-content");
-    this.metamaskOption = this.walletModal.getByText("MetaMask", {
-      exact: true,
-    });
     this.menuBurger = this.page.locator("#main-burger-menu-button");
   }
 
