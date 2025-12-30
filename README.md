@@ -70,3 +70,4 @@ npm run e2e:wallet:navigate -> this will trigger navigate flow
 
 1. Implement Docker to ensure a clean and consistent environment setup.
 2. Integrate additional CI/CD jobs and actions to improve workflow transparency and create more approachable development cycles.
+3. Add other reporting then HTML or lint (like Allure or etc) to increase readability and track previous runs better.
