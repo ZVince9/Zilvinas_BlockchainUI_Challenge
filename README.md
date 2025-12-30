@@ -59,9 +59,14 @@ npm run e2e:wallet:connect -> this will trigger wallet connection flow
 npm run e2e:wallet:navigate -> this will trigger navigate flow
 ```
 
-### 5. Potential risks
+### 5. Potential current risks and incresing flows
 
 1. When running swaps or bridge trx there is delay which is sometime unclear which could trigger flakiness so adding retries sometimes is not a bad solution or adding static timeouts.
 2. If MM wallet is broken test will not work as well due to third party dependency.
 3. Rate limit while running could hit so using api-key is crucial as well.
 4. RPC Provider downtime increases flakiness on bridges/swaps as well.
+
+### 6. Future adjustments
+
+1. Implement Docker to ensure a clean and consistent environment setup.
+2. Integrate additional CI/CD jobs and actions to improve workflow transparency and create more approachable development cycles.
